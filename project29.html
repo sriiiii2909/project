@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Page</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ab1212;
+        }
+
+        /* Header */
+        header {
+            background-color: #010f21;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        /* Product Container using Flexbox */
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 40px 20px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Card Hover Effect */
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Product Image */
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        /* Product Name */
+        .product-card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Product Price */
+        .price {
+            font-size: 22px;
+            color: #e63946;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Buy Now Button */
+        .buy-btn {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Button Hover Effect */
+        .buy-btn:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .product-container {
+                padding: 25px 10px;
+            }
+
+            .product-card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>KADUKAL</h1>
+        <p>DEWALI SERAPPU THALUPADI </p>
+    </header>
+
+    <!-- Product Section -->
+    <main class="product-container">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+                alt="Wireless Headphones"
+            >
+            <h2>KAMBI ILLA THALAI THOLAIPESI</h2>
+            <p class="price">₹1,499</p>
+            <button class="buy-btn" onclick="buyNow('Wireless Headphones')">
+                Buy Now
+            </button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+                alt="Smart Watch"
+            >
+            <h2>KAI KADIGARAM</h2>
+            <p class="price">₹2,499</p>
+            <button class="buy-btn" onclick="buyNow('Smart Watch')">
+                Buy Now
+            </button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
+                alt="Sports Shoes"
+            >
+            <h2>VILAYATTU KAAL ANIGAL</h2>
+            <p class="price">₹1,999</p>
+            <button class="buy-btn" onclick="buyNow('Sports Shoes')">
+                Buy Now
+            </button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img
+                src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400"
+                alt="Digital Camera"
+            >
+            <h2>PUGAI PADA KARUVI</h2>
+            <p class="price">₹5,999</p>
+            <button class="buy-btn" onclick="buyNow('Digital Camera')">
+                Buy Now
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Website Footer -->
+    <footer>
+        <p>&copy; 2026 My Online Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Buy Now Function -->
+    <script>
+        function buyNow(productName) {
+            alert("You selected: " + productName);
+        }
+    </script>
+ 
+</body>
+</html>
